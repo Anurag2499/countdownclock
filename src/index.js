@@ -1,3 +1,5 @@
+// this is the logic part for the count down clock.
+
 (function () {
   var hour = document.querySelector('.hour');
   var min = document.querySelector('.min');
