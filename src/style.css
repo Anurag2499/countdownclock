@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: sans-serif;
+
+} */
+
+/* General body styling */
+body {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+    /* Dark background */
+}
+
+/* Creating the stars */
+.stars {
+    width: 1px;
+    height: 1px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    animation: twinkling 2s infinite ease-in-out;
+    box-shadow:
+        1000px 2000px white,
+        1500px 2500px white,
+        2000px 1500px white,
+        2500px 1000px white,
+        1000px 3000px white,
+        3000px 1000px white,
+        4000px 5000px white,
+        5000px 4000px white,
+        6000px 7000px white,
+        7000px 6000px white,
+        8000px 500px white,
+        9000px 100px white,
+        1100px 2000px white,
+        1300px 2400px white,
+        1400px 2200px white,
+        1600px 2700px white;
+}
+
+/* Animation keyframes */
+@keyframes twinkling {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-1000px);
+    }
+}
+
+/* For star clusters */
+.stars:before,
+.stars:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+        1000px 2000px white,
+        1500px 2500px white,
+        2000px 1500px white,
+        2500px 1000px white,
+        1000px 3000px white,
+        3000px 1000px white,
+        4000px 5000px white,
+        5000px 4000px white,
+        6000px 7000px white,
+        7000px 6000px white,
+        8000px 500px white,
+        9000px 100px white,
+        1100px 2000px white,
+        1300px 2400px white,
+        1400px 2200px white,
+        1600px 2700px white;
+    animation: twinkling 2s infinite ease-in-out;
+}
+
+
+.container__title {
+    padding: 10px 40px;
+    margin: 10px;
+    font-size: 50px;
+    text-align: center;
+    color: azure;
+}
+
+.container {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container_btns,
+.container__inputs,
+.container__labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_btns {
+    margin-top: 20px;
+}
+
+.container__labels--label {
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
+    padding: 5px 1px;
+    color: antiquewhite;
+}
+
+.container__inputs--time {
+    border: none;
+    font-size: 50px;
+    width: 90px;
+    height: 50px;
+    outline: none;
+    margin: 10px 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container__input--colon {
+    font-size: 30px;
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.btn {
+    width: 48%;
+    height: 50px;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    /* padding: 10px;*/
+    /* margin: 0px 10px; */
+}
+
+.start {
+    background-color: green;
+}
+
+.stop {
+    display: none;
+    background-color: red;
+}
+
+.reset {
+    background-color: blue;
+}
